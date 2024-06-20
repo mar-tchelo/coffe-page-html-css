@@ -1,0 +1,282 @@
+@import url(global.css);
+
+/* Inicio do Header CSS */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-bottom: var(--border);
+    transition: background-color 0.5s ease;
+}
+
+.header.scrolled{
+    background-color: var(--bg);
+}
+
+.header section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.header .navbar a{
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    color: var(--white);
+    position: relative;
+    padding-bottom: 0.5rem;
+  
+    
+}
+
+.header .navbar a:hover{
+    color: var(--main-color);
+    font-size: 2rem;
+}
+
+.header .navbar a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0.1rem;
+    background-color: var(--main-color);
+}
+
+.header .navbar a:hover::after{
+    animation: grow 0.3s ease-in-out forwards;
+}
+
+@keyframes grow{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+
+.icons img{
+    margin: 1rem;
+    cursor: pointer;
+
+}
+
+.icons img:hover{
+ transform: scale(1.2);
+}
+
+
+/* inicio Homer */
+
+.home-container section{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.btn{
+    background: var(--main-color);
+    color: var(--white);
+    padding: 1rem 3rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 1.rem;
+    text-transform: uppercase;
+    transition: transform .5s ease-in-out;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
+.home-container{
+    background: url("https://i.ibb.co/KX8pvpC/home-img.jpg");
+    
+    background-position: center;
+    background-size: cover;
+}
+
+.content{
+    max-width: 60rem ;
+}
+
+.content h3 {
+    color: var(--white);
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+.content p {
+    color: var(--white);
+    font-size:2rem ;
+    font-weight: 100;
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+
+/* Inicio do sobre nós */
+
+.title{
+    font-size: 4rem;
+    color:var(--main-color);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+}
+
+.title span{
+    color: var(--white);
+    
+}
+
+.about .row{
+ display: flex;
+ align-items: center;
+ background-color: var(--black);
+ gap: 1.5rem;
+}
+
+.about .row .content{
+    padding: 2rem;
+}
+
+.about .row .content h3{
+    font-size: 3rem;
+    color: var(--white);
+}
+
+
+.about .row .content p{
+    font-size: 1.6rem;
+    color: var(--white);
+    padding: 1rem 0;
+    line-height: 2;
+}
+
+/* Inicio Menu */
+
+.box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    
+}
+
+.menu .box-container .box{
+    text-align: center;
+    border: var(--border);
+    padding: 5rem;
+}
+
+.menu .box-container .box:hover{
+    background-color: var(--white);
+}
+
+.menu .box-container .box:hover>*{
+    color: var(--black);
+}
+
+.menu .box-container .box img{
+    height: 10rem;
+}
+
+.menu .box-container .box h3{
+    color: var(--white);
+    font-size: 2rem;
+    padding: 1rem 0;
+
+}
+
+.menu .box-container .box div{
+    color:var(--white);
+    font-size: 2.5rem;
+    padding: 0.5rem 0;
+}
+
+.menu .box-container .box span{
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: 100;
+}
+
+/* Inicio nosso clientes */
+
+.review .box-container .box {    
+    border: var(--border);
+    text-align: center;
+    padding: 3rem 2rem;
+    
+}
+
+.review .box-container .box p {
+    font-size: 1.5rem;
+    color: var(--white);
+    padding: 2rem 0;    
+    line-height: 1.8;
+    font-weight: lighter;
+}
+
+.review .box-container .box .user {
+   height: 10rem;
+   width: 10rem;
+   border-radius: 50%; 
+}
+
+.review .box-container .box h3 {
+    font-size: 2rem;
+    color: var(--white);
+    padding: 2rem 0; 
+    font-weight: 300;
+    
+}
+
+.address{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer{
+    text-align: center;
+    padding-bottom: 2rem;
+
+
+}
+
+footer .share{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+  
+}
+
+footer .share img{
+    
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.5s ease-in-out;
+  
+    padding: 1rem;
+    height: 50px;
+    width: 50px;
+}
+
+footer .share img:hover{
+    transform: scale(1.2);
+    background-color: var(--main-color);
+}
+
+footer .title{
+    margin-bottom: 0;
+    font-size: 3rem;
+}
